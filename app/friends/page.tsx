@@ -1,0 +1,1 @@
+export default function Friends(){ return <div className='card max-w-3xl mx-auto'>Friends — stub.</div>; }

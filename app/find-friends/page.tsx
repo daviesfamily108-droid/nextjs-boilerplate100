@@ -1,0 +1,1 @@
+export default function Find(){ return <div className='card max-w-3xl mx-auto'>Find Friends — stub.</div>; }

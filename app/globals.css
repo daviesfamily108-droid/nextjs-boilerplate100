@@ -1,26 +1,16 @@
-@import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+:root { --bdl-font: "Comic Sans MS", "Comic Sans", cursive; }
+html, body { @apply bg-gradient-to-b from-slate-900 to-slate-800 text-slate-100; font-family: var(--bdl-font); }
+a { @apply text-brand-300 hover:text-brand-200; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+.card { @apply bg-slate-800/70 rounded-2xl p-5 shadow-card backdrop-blur; }
+.btn { @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-brand-600 hover:bg-brand-500 transition; }
+.btn-outline { @apply border border-slate-600 hover:bg-slate-700 rounded-xl px-3 py-2; }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+.lock-corner { @apply absolute top-3 right-3 text-yellow-300; }
+
+.resizer { @apply w-1 cursor-col-resize bg-slate-700/60 hover:bg-slate-500/80; }

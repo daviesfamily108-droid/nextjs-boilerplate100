@@ -1,0 +1,1 @@
+export default function Stats(){ return <div className='card max-w-3xl mx-auto'>Stats — stub.</div>; }
